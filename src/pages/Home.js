@@ -14,7 +14,6 @@ class Home extends Component {
 
   async fetchData(){
     this.setState({loading: true, error: null})
-
     try {
       var data;
       var response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -23,8 +22,6 @@ class Home extends Component {
     } catch (error) {
       this.setState({loading: false, error: error})
     }
-
-
   }
 
   render(){
